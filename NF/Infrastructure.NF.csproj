@@ -72,22 +72,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\MCD\Notificator.cs">
+    <Compile Include="..\src\MCD\Notificator.cs">
       <Link>MCD\Notificator.cs</Link>
     </Compile>
-    <Compile Include="..\Service\ClsINIinterop.cs">
+    <Compile Include="..\src\Service\ClsINIinterop.cs">
       <Link>Service\ClsINIinterop.cs</Link>
     </Compile>
-    <Compile Include="..\Service\CmdInfo.cs">
+    <Compile Include="..\src\Service\CmdInfo.cs">
       <Link>Service\CmdInfo.cs</Link>
     </Compile>
-    <Compile Include="..\Service\Msg.cs">
+    <Compile Include="..\src\Service\Msg.cs">
       <Link>Service\Msg.cs</Link>
     </Compile>
-    <Compile Include="..\Utilites\UtilitesString.cs">
+    <Compile Include="..\src\Utilites\UtilitesString.cs">
       <Link>Utilites\UtilitesString.cs</Link>
     </Compile>
-    <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
