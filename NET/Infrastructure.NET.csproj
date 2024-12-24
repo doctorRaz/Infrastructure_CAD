@@ -30,44 +30,13 @@
 		<AssemblyName>Infrastructure.NET</AssemblyName>
 	</PropertyGroup>
 
-	<ItemGroup>
-	  <Reference Include="hostdbmgd">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\hostdbmgd.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="hostmgd">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\hostmgd.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="imapimgd">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\imapimgd.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="MapiBaseTypes">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\mapibasetypes.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="mapiforms">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\mapiforms.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="mapimgd">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\mapimgd.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="mapinet">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\mapinet.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="mapiwpf">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\mapiwpf.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	  <Reference Include="McUnits">
-	    <HintPath>..\..\..\..\SDK\NC24.1\include-x64\McUnits.dll</HintPath>
-	    <Private>False</Private>
-	  </Reference>
-	</ItemGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <DefineConstants>$(DefineConstants);NC</DefineConstants>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <DefineConstants>$(DefineConstants);NC</DefineConstants>
+	</PropertyGroup>
 <ItemGroup>
     <Compile Include="..\src\MCD\Notificator.cs">
       <Link>MCD\Notificator.cs</Link>
@@ -85,4 +54,21 @@
       <Link>Utilites\UtilitesString.cs</Link>
     </Compile>
   </ItemGroup>
+<ItemGroup>
+  <Reference Include="hostdbmgd">
+    <HintPath>..\SDK\NC23.1\hostdbmgd.dll</HintPath>
+    <Private>False</Private>
+    <SpecificVersion>False</SpecificVersion>
+  </Reference>
+  <Reference Include="hostmgd">
+    <HintPath>..\SDK\NC23.1\hostmgd.dll</HintPath>
+    <Private>False</Private>
+    <SpecificVersion>False</SpecificVersion>
+  </Reference>
+  <Reference Include="mapimgd">
+    <HintPath>..\SDK\NC23.1\mapimgd.dll</HintPath>
+    <Private>False</Private>
+    <SpecificVersion>False</SpecificVersion>
+  </Reference>
+</ItemGroup>
 </Project>

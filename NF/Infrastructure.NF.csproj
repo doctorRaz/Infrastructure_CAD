@@ -41,23 +41,15 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="hostdbmgd">
-      <HintPath>c:\SDK_NC\NC_SDK_22.0.5944.3726.6053\include-x64\hostdbmgd.dll</HintPath>
+      <HintPath>..\SDK\NC22\hostdbmgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="hostmgd">
-      <HintPath>c:\SDK_NC\NC_SDK_22.0.5944.3726.6053\include-x64\hostmgd.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="imapimgd">
-      <HintPath>C:\SDK_NC\NC_SDK_22.0.5944.3726.6053\include-x64\imapimgd.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="mapibasetypes">
-      <HintPath>C:\SDK_NC\NC_SDK_22.0.5944.3726.6053\include-x64\mapibasetypes.dll</HintPath>
+      <HintPath>..\SDK\NC22\hostmgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="mapimgd">
-      <HintPath>C:\SDK_NC\NC_SDK_22.0.5944.3726.6053\include-x64\mapimgd.dll</HintPath>
+      <HintPath>..\SDK\NC22\mapimgd.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />

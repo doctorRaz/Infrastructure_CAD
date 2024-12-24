@@ -1,9 +1,22 @@
-﻿using HostMgd.ApplicationServices;
+﻿using System.Windows.Forms;
+
+
+
+
+
+#if NC
+using HostMgd.ApplicationServices;
 using HostMgd.EditorInput;
 
-using System.Windows.Forms;
-
 using Application = HostMgd.ApplicationServices.Application;
+
+#elif AC
+using Autodesk.AutoCAD.ApplicationServices;
+using Application = Autodesk.AutoCAD.ApplicationServices.Application;
+using Autodesk.AutoCAD.EditorInput;
+
+#endif
+
 
 namespace drz.Infrastructure.Service
 {

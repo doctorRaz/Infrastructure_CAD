@@ -1,7 +1,18 @@
-﻿using System.ComponentModel;
+﻿//https://autolisp.ru/2024/10/29/nanocad-vyvod-komand-s-ix-opisaniem-cherez-net/ 
+
+using System.ComponentModel;
 using System.Reflection;
-using Teigha.Runtime;
 using System;
+
+#if NC
+
+using Teigha.Runtime;
+
+#elif AC
+using Autodesk.AutoCAD.Runtime;
+
+#endif  
+
 
 namespace drz.Infrastructure.Service
 {
