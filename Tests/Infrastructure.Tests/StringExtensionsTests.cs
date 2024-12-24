@@ -10,6 +10,8 @@ namespace Infrastructure.Tests
         {
             Assert.IsTrue("kpblc2000@gmail.com".IsCorrectMail());
             Assert.IsFalse("kpblc2000@yandex@gmail.com".IsCorrectMail());
+            Assert.IsFalse("kpblc2000@yandex@gmail.com".IsCorrectMail());
+            Assert.IsFalse("kpblc 2000@@yandex@gmail.com".IsCorrectMail());
         }
     }
 }

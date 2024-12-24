@@ -7,16 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.NET", "NET\I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.NF", "NF\Infrastructure.NF.csproj", "{732FEB22-469D-47FF-81E4-FF61D67573E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test CMD", "Test\Test CMD.csproj", "{75B4711A-B866-4416-A1F3-CAFE10FE9352}"
-	ProjectSection(ProjectDependencies) = postProject
-		{732FEB22-469D-47FF-81E4-FF61D67573E2} = {732FEB22-469D-47FF-81E4-FF61D67573E2}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test CMD NF", "Test\Test CMD NF.csproj", "{75B4711A-B866-4416-A1F3-CAFE10FE9352}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Extensions", "Infrastructure.Extensions\Infrastructure.Extensions.csproj", "{69B501F9-E966-454E-8709-72A916AA7FAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Extensions", "Infrastructure.Extensions\Infrastructure.Extensions.csproj", "{69B501F9-E966-454E-8709-72A916AA7FAB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{F2B7C8DD-0C9D-486F-8770-5C788C98467D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Tests", "Tests\Infrastructure.Tests\Infrastructure.Tests.csproj", "{9580BA50-F16B-4E3D-B4B6-43BAAF286693}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Tests", "Tests\Infrastructure.Tests\Infrastructure.Tests.csproj", "{9580BA50-F16B-4E3D-B4B6-43BAAF286693}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

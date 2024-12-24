@@ -86,6 +86,15 @@ namespace drz.test
         {
             msgService.ConsoleMessage("Test2 command");
         }
+
+        [Rtm.CommandMethod("drz_MyCommand3", Rtm.CommandFlags.Session)]
+        [Description("Test 3 : Описание команд " /*+ nameof(test_cmd2)*/)]
+        public void test_cmd3()
+        {
+            //выводим список команд с описаниями
+            CmdInfo comInf = new CmdInfo();
+            comInf.Reflection(Assembly.GetExecutingAssembly()); //отдельной сборкой
+        }
         #endregion
     }
 }

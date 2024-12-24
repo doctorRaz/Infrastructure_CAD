@@ -49,4 +49,11 @@
 <ItemGroup>
   <PackageReference Include="nanoCadCore23.1.NET" Version="1.0.0" />
 </ItemGroup>
+<ItemGroup>
+  <Reference Include="mapimgd">
+    <HintPath>..\SDK\NC23.1\mapimgd.dll</HintPath>
+    <Private>False</Private>
+    <SpecificVersion>False</SpecificVersion>
+  </Reference>
+</ItemGroup>
 </Project>
