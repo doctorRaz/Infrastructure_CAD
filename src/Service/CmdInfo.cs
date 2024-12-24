@@ -87,7 +87,7 @@ namespace drz.Infrastructure.Service
                     {
                         if (temp.descriptionAttr != null)
                         {
-                            msgService.ConsoleMessage(temp.MethodAttr.GlobalName + " → "+sDeb +
+                            msgService.ConsoleMessage(temp.MethodAttr.GlobalName + "\t"+sDeb +
                             temp.descriptionAttr.Description ?? "");
                         }
                         else
