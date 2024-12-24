@@ -72,6 +72,11 @@ namespace drz.Infrastructure.Service
 
             Type[] expTyped = asm.GetTypes();
 
+            string sDeb = "";
+#if DEBUG
+            sDeb = " DEBUG ";
+#endif
+
             foreach (Type t in expTyped)
             {
                 MethodInfo[] methods = t.GetMethods();
@@ -82,7 +87,7 @@ namespace drz.Infrastructure.Service
                     {
                         if (temp.descriptionAttr != null)
                         {
-                            msgService.ConsoleMessage(temp.MethodAttr.GlobalName + " >> " +
+                            msgService.ConsoleMessage(temp.MethodAttr.GlobalName + " → "+sDeb +
                             temp.descriptionAttr.Description ?? "");
                         }
                         else

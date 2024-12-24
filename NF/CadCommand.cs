@@ -50,6 +50,16 @@ namespace drz.test
     /// </summary>
     internal class CadCommand : Rtm.IExtensionApplication
     {
+#if !DEBUG
+        public void Initialize()
+        {
+        }
+        public void Terminate()
+        {
+            // throw new System.NotImplementedException();
+        }
+#else
+
         #region INIT
         public void Initialize()
         {
@@ -73,22 +83,22 @@ namespace drz.test
         /// <summary>
         /// переключалка нанобаз
         /// </summary>
-        [Rtm.CommandMethod("drz_MyCommand", Rtm.CommandFlags.Session)]
-        [Description("Test 1 : Описание команды адын " /*+ nameof(test_cmd)*/)]
+        [Rtm.CommandMethod("drz_MyCommand0", Rtm.CommandFlags.Session)]
+        [Description("Test 1 : ref Описание команды адын " /*+ nameof(test_cmd)*/)]
         public void test_cmd()
         {
             msgService.ConsoleMessage("Test1 command");
         }
 
-        [Rtm.CommandMethod("drz_MyCommand2", Rtm.CommandFlags.Session)]
-        [Description("Test 2 : Описание команды два " /*+ nameof(test_cmd2)*/)]
+        [Rtm.CommandMethod("drz_MyCommand20", Rtm.CommandFlags.Session)]
+        [Description("Test 2 : ref Описание команды два " /*+ nameof(test_cmd2)*/)]
         public void test_cmd2()
         {
             msgService.ConsoleMessage("Test2 command");
         }
 
-        [Rtm.CommandMethod("drz_MyCommand3", Rtm.CommandFlags.Session)]
-        [Description("Test 3 : Run info assembly " /*+ nameof(test_cmd2)*/)]
+        [Rtm.CommandMethod("drz_MyCommand30", Rtm.CommandFlags.Session)]
+        [Description("Test 3 : ref Run info assembly " /*+ nameof(test_cmd2)*/)]
         public void test_cmd3()
         {
             //выводим список команд с описаниями
@@ -97,5 +107,6 @@ namespace drz.test
             //comInf.Reflection(); //модуль в этой сборке
         }
         #endregion
+#endif
     }
 }
