@@ -53,6 +53,9 @@
     <Compile Include="..\src\Utilites\UtilitesString.cs">
       <Link>Utilites\UtilitesString.cs</Link>
     </Compile>
+    <Compile Include="..\src\Utilites\Extensions.cs">
+      <Link>Utilites\Extensions.cs</Link>
+    </Compile>
   </ItemGroup>
 <ItemGroup>
   <Reference Include="hostdbmgd">

@@ -39,7 +39,7 @@ namespace drz.Infrastructure.Service
         /*public*/
         DescriptionAttribute descriptionAttr { get; set; }
 
-        Assembly asm { get; set; }
+        //Assembly asm { get; set; }
 
         /// <summary>
         /// Reflections this instance.
@@ -47,26 +47,23 @@ namespace drz.Infrastructure.Service
         /// </summary>
         public void Reflection()
         {
-            asm = Assembly.GetExecutingAssembly();
-            ReflectionEngine();
+            ReflectionEngine(Assembly.GetExecutingAssembly());
         }
-
 
         /// <summary>
         /// Reflections the specified asm.
         /// <br>если подключаем как библиотеку</br>
         /// </summary>
         /// <param name="_asm">Assembly сборки из которой надо вытащить команды</param>
-        public void Reflection(Assembly _asm)
+        public void Reflection(Assembly asm)
         {
-            asm = _asm;
-            ReflectionEngine();
+            ReflectionEngine(asm);
         }
 
         /// <summary>
         /// Reflections the engine.
         /// </summary>
-        void ReflectionEngine()
+        void ReflectionEngine(Assembly asm)
         {
             Msg msgService = new Msg();
 
@@ -87,7 +84,7 @@ namespace drz.Infrastructure.Service
                     {
                         if (temp.descriptionAttr != null)
                         {
-                            msgService.ConsoleMessage(temp.MethodAttr.GlobalName + "\t"+sDeb +
+                            msgService.ConsoleMessage(temp.MethodAttr.GlobalName + "\t" + sDeb +
                             temp.descriptionAttr.Description ?? "");
                         }
                         else
