@@ -12,7 +12,7 @@ namespace drz.Infrastructure.MCD
     /// <summary>
     /// нотифай мультикад
     /// </summary>
-    class NotifaiMessag
+   public class NotifaiMessag
     {
         private string sURL { get; set; }
 
@@ -72,9 +72,9 @@ namespace drz.Infrastructure.MCD
     }
 
     /// <summary>
-    /// вызов наносообщений
+    /// вызов наносообщений examples
     /// </summary>
-    class notyCMD
+   public class notyCMD
     {
         /// <summary>
         /// Пример вызова нотифай со ссылкой

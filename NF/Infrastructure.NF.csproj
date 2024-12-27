@@ -77,7 +77,7 @@
       <Link>Service\Msg.cs</Link>
     </Compile>
     <Compile Include="..\src\Utilites\Extensions.cs">
-      <Link>Service\Extensions.cs</Link>
+      <Link>Utilites\Extensions.cs</Link>
     </Compile>
     <Compile Include="..\src\Utilites\UtilitesString.cs">
       <Link>Utilites\UtilitesString.cs</Link>
