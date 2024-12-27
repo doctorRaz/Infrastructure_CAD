@@ -31,6 +31,15 @@ namespace drz.Infrastructure.Service
         CommandMethodAttribute MethodAttr { get; set; }
 
         /// <summary>
+        /// Gets or sets the Name attribute.
+        /// </summary>
+        /// <value>
+        /// The Name attribute.
+        /// </value>
+        /*public*/
+        string NameAttr { get; set; }
+
+        /// <summary>
         /// Gets or sets the description attribute.
         /// </summary>
         /// <value>
@@ -73,7 +82,8 @@ namespace drz.Infrastructure.Service
 #if DEBUG
             sDeb = " DEBUG ";
 #endif
-
+            string smes = "";
+            string smetod = "";
             foreach (Type t in expTyped)
             {
                 MethodInfo[] methods = t.GetMethods();
@@ -82,18 +92,31 @@ namespace drz.Infrastructure.Service
                     CmdInfo temp = GetCmdInfo(method);
                     if (temp != null)
                     {
+#if DEBUG
+                        smetod = " [" + temp.NameAttr + "]";
+#endif
+
                         if (temp.descriptionAttr != null)
                         {
-                            msgService.ConsoleMessage(temp.MethodAttr.GlobalName + "\t" + sDeb +
-                            temp.descriptionAttr.Description ?? "");
+                            //msgService.ConsoleMessage(temp.MethodAttr.GlobalName + "\t" + sDeb +
+                            //temp.descriptionAttr.Description ?? "");
+                            smes = smes + temp.MethodAttr.GlobalName +
+                                smetod +
+                                "\t" + sDeb +
+                            temp.descriptionAttr.Description + "\n";
                         }
                         else
                         {
-                            msgService.ConsoleMessage(temp.MethodAttr.GlobalName);
+                            smes = smes + temp.MethodAttr.GlobalName +
+                                smetod+
+                                "\n";
+                            //msgService.ConsoleMessage(temp.MethodAttr.GlobalName);
                         }
                     }
                 }
             }
+            msgService.ConsoleMessage(smes);
+
         }
 
         /// <summary>
@@ -110,6 +133,8 @@ namespace drz.Infrastructure.Service
 
             foreach (object attr in attrs)
             {
+                res.NameAttr = method.Name;
+
                 if (attr is CommandMethodAttribute cmdAttr)
                 {
                     res.MethodAttr = cmdAttr;
