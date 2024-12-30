@@ -49,4 +49,7 @@
 <ItemGroup>
   <PackageReference Include="nanoCadCore23.1.NET" Version="1.0.0" />
 </ItemGroup>
+<ItemGroup>
+  <ProjectReference Include="..\Infrastructure.Extensions\Infrastructure.Extensions.csproj" />
+</ItemGroup>
 </Project>
